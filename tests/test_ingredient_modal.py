@@ -8,6 +8,7 @@ class TestIngredientModal:
         page = MainPage(driver)
         page.click_ingredient()
         assert page.is_modal_visible()
+        page.close_modal()
 
     @allure.title("Модальное окно закрывается крестиком")
     def test_modal_closes(self, driver):
