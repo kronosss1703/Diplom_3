@@ -22,3 +22,7 @@ class BasePage:
     @allure.step("Ожидание URL содержит {text}")
     def wait_url_contains(self, text):
         self.wait.until(lambda d: text in d.current_url)
+
+    @allure.step("Получение текущего URL")
+    def get_current_url(self):
+        return self.driver.current_url
